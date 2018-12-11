@@ -1,27 +1,76 @@
 <div class="container">
   <div class="input">
-    <label>
-      <span>Hours</span>
-      <input [OnlyNumber]=true [(ngModel)]="hours" />
-    </label>
+    <mat-form-field class="field">
+      <mat-label>Hours</mat-label>
+      <input matInput [OnlyNumber]="true" [(ngModel)]="hours" placeholder="0" />
+      <button
+        mat-button
+        *ngIf="hours"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="hours = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
 
-    <label>
-      <span>Minutes</span>
-      <input [OnlyNumber]=true [(ngModel)]="minutes" />
-    </label>
+    <mat-form-field class="field">
+      <mat-label>Minutes</mat-label>
+      <input
+        matInput
+        [OnlyNumber]="true"
+        [(ngModel)]="minutes"
+        placeholder="0"
+      />
+      <button
+        mat-button
+        *ngIf="minutes"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="minutes = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
 
-    <label>
-      <span>Seconds</span>
-      <input [OnlyNumber]=true [(ngModel)]="seconds" />
-    </label>
+    <mat-form-field class="field">
+      <mat-label>Seconds</mat-label>
+      <input
+        matInput
+        [OnlyNumber]="true"
+        [(ngModel)]="seconds"
+        placeholder="0"
+      />
+      <button
+        mat-button
+        *ngIf="seconds"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="seconds = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
   </div>
 
-  <button mat-raised-button color="primary" *ngIf="!isShuttingDown" (click)="shutDown()">
+  <button
+    mat-raised-button
+    color="primary"
+    *ngIf="!isShuttingDown"
+    (click)="shutDown()"
+  >
     Plan shutdown
   </button>
 
-  <button mat-raised-button color="primary" *ngIf="isShuttingDown" (click)="abortShutDown()">
+  <button
+    mat-raised-button
+    color="primary"
+    *ngIf="isShuttingDown"
+    (click)="abortShutDown()"
+  >
     Cancel shutdown
   </button>
-
 </div>

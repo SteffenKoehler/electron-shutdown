@@ -10,13 +10,9 @@
     flex-direction: 'row';
     margin-bottom: 30px;
 
-    span {
-      margin-left: 15px;
-      margin-right: 5px;
-    }
-
-    input {
-      width: 80px;
+    .field {
+      width: 100px;
+      margin-right: 20px;
     }
   }
 

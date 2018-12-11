@@ -10,9 +10,9 @@ export class HomeComponent implements OnInit {
 
   isShuttingDown: boolean;
 
-  hours = '0';
-  minutes = '0';
-  seconds = '0';
+  hours: string;
+  minutes: string;
+  seconds: string;
 
   constructor() { }
 
@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
     // first cancel shutdown if one is already pending
     this.abortShutDown();
 
-    const _hours = parseInt(this.hours, 10) * 60 * 60;
-    const _minutes = parseInt(this.minutes, 10) * 60;
-    const _seconds = parseInt(this.seconds, 10);
+    const _hours = (parseInt(this.hours, 10) * 60 * 60) || 0;
+    const _minutes = (parseInt(this.minutes, 10) * 60) || 0;
+    const _seconds = (parseInt(this.seconds, 10)) || 0;
     const _shutdownTime = _hours + _minutes + _seconds;
 
     if (_shutdownTime > 0) {
