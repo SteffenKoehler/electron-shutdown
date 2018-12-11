@@ -1,5 +1,27 @@
 <div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+  <div class="input">
+    <label>
+      <span>Hours</span>
+      <input [OnlyNumber]=true [(ngModel)]="hours" />
+    </label>
+
+    <label>
+      <span>Minutes</span>
+      <input [OnlyNumber]=true [(ngModel)]="minutes" />
+    </label>
+
+    <label>
+      <span>Seconds</span>
+      <input [OnlyNumber]=true [(ngModel)]="seconds" />
+    </label>
+  </div>
+
+  <button *ngIf="!isShuttingDown" (click)="shutDown()">
+    ShutDown
+  </button>
+
+  <button *ngIf="isShuttingDown" (click)="abortShutDown()">
+    Cancel Shutdown
+  </button>
+
 </div>
