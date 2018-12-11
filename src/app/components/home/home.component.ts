@@ -20,6 +20,9 @@ export class HomeComponent implements OnInit {
   }
 
   shutDown() {
+    // first cancel shutdown if one is already pending
+    this.abortShutDown();
+
     const _hours = parseInt(this.hours, 10) * 60 * 60;
     const _minutes = parseInt(this.minutes, 10) * 60;
     const _seconds = parseInt(this.seconds, 10);
