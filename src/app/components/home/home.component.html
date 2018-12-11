@@ -16,12 +16,12 @@
     </label>
   </div>
 
-  <button *ngIf="!isShuttingDown" (click)="shutDown()">
-    ShutDown
+  <button mat-raised-button color="primary" *ngIf="!isShuttingDown" (click)="shutDown()">
+    Plan shutdown
   </button>
 
-  <button *ngIf="isShuttingDown" (click)="abortShutDown()">
-    Cancel Shutdown
+  <button mat-raised-button color="primary" *ngIf="isShuttingDown" (click)="abortShutDown()">
+    Cancel shutdown
   </button>
 
 </div>

@@ -28,14 +28,16 @@ export class HomeComponent implements OnInit {
     const _seconds = parseInt(this.seconds, 10);
     const _shutdownTime = _hours + _minutes + _seconds;
 
-    shutdown.shutdown({
-      force: true,
-      timerseconds: _shutdownTime,
-      sudo: true,
-      debug: false,
-    });
+    if (_shutdownTime > 0) {
+      shutdown.shutdown({
+        force: true,
+        timerseconds: _shutdownTime,
+        sudo: true,
+        debug: false,
+      });
 
-    this.isShuttingDown = true;
+      this.isShuttingDown = true;
+    }
   }
 
   abortShutDown() {
