@@ -1,4 +1,4 @@
-image: electronuserland/builder
+image: aheuermann/electron:latest
 stages:
   - build
   
