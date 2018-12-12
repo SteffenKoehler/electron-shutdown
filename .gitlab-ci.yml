@@ -1,0 +1,14 @@
+stages:
+  - build
+  
+before_script:
+  - npm install
+  - npm --prefix ./functions install
+  
+app-build:
+  stage: build
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - npm run electron:windows
