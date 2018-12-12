@@ -1,4 +1,4 @@
-image: aheuermann/electron:latest
+image: 4tqrgqe5yrgfd/electron
 stages:
   - build
   
