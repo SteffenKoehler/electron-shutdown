@@ -7,7 +7,7 @@ before_script:
   - npm --prefix ./functions install
   
 app-build-windows:
-  stage: build-windows
+  stage: build
   artifacts:
     paths:
       - release/*.exe
@@ -16,7 +16,7 @@ app-build-windows:
     
     
 app-build-mac:
-  stage: build-mac
+  stage: build
   artifacts:
     paths:
       - release/*.app
