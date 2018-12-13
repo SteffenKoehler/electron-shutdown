@@ -15,10 +15,10 @@ app-build-windows:
     - npm run electron:windows
     
     
-app-build-mac:
+app-build-linux:
   stage: build
   artifacts:
     paths:
       - release/*.app
   script:
-    - npm run electron:mac
+    - npm run electron:linux
