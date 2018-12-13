@@ -10,6 +10,6 @@ app-build:
   stage: build
   artifacts:
     paths:
-      - release/
+      - release/*.exe
   script:
     - npm run electron:windows
