@@ -19,6 +19,6 @@ app-build-linux:
   stage: build
   artifacts:
     paths:
-      - release/*.app
+      - release/*.AppImage
   script:
     - npm run electron:linux
