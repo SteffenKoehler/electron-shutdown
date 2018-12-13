@@ -6,10 +6,19 @@ before_script:
   - npm install
   - npm --prefix ./functions install
   
-app-build:
-  stage: build
+app-build-windows:
+  stage: build-windows
   artifacts:
     paths:
       - release/*.exe
   script:
     - npm run electron:windows
+    
+    
+app-build-mac:
+  stage: build-mac
+  artifacts:
+    paths:
+      - release/*.app
+  script:
+    - npm run electron:mac
