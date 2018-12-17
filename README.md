@@ -30,7 +30,7 @@ With this sample, you can :
 Clone this repository locally :
 
 ``` bash
-git clone https://github.com/maximegris/angular-electron.git
+git clone https://gitlab.com/SteffenKoehler/electron-shutdown.git
 ```
 
 Install dependencies with npm :
