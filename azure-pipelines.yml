@@ -33,5 +33,6 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    rootFolderOrFile: './release/'
     includeRootFolder: false
+    archiveType: 'zip'
