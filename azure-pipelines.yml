@@ -31,8 +31,6 @@ steps:
   displayName: 'npm install and build windows'
 
 
-- task: ArchiveFiles@2
+- task: PublishBuildArtifacts@1
   inputs:
-    rootFolderOrFile: 'release/'
-    includeRootFolder: false
-    archiveType: 'zip'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)'
