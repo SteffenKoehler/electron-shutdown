@@ -27,7 +27,6 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
-    npm run electron:windows
   displayName: 'npm install'
 
 - script: |
