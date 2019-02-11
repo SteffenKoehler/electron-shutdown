@@ -33,6 +33,6 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: './release/'
+    rootFolderOrFile: 'release/'
     includeRootFolder: false
     archiveType: 'zip'
