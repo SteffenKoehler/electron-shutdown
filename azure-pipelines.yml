@@ -28,7 +28,11 @@ steps:
     npm install -g @angular/cli
     npm install
     npm run electron:windows
-  displayName: 'npm install and build windows'
+  displayName: 'npm install'
+
+- script: |
+    npm run electron:windows
+  displayName: 'Build windows'
 
 
 - task: PublishBuildArtifacts@1
