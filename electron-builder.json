@@ -1,6 +1,6 @@
 {
   "productName": "angular-electron",
-  "publish": "never",
+  "publish": null,
   "directories": {
     "output": "release/"
   },
