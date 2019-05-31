@@ -78,7 +78,7 @@
     "protractor": "5.4.2",
     "rxjs": "6.5.2",
     "ts-node": "8.2.0",
-    "tslint": "5.16.0",
+    "tslint": "5.17.0",
     "typescript": "3.2.4",
     "wait-on": "3.2.0",
     "webdriver-manager": "12.1.4",
