@@ -19,7 +19,10 @@ function createWindow() {
     x: size.width - WIDTH,
     y: size.height - HEIGHT,
     width: WIDTH,
-    height: HEIGHT
+    height: HEIGHT,
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
 
   if (serve) {
