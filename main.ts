@@ -40,6 +40,8 @@ function createWindow() {
 
   if (serve) {
     win.webContents.openDevTools();
+  } else {
+    win.setMenuBarVisibility(false);
   }
 
   // Emitted when the window is closed.

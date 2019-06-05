@@ -1,5 +1,5 @@
 {
-  "productName": "angular-electron",
+  "productName": "auto shutdown",
   "publish": null,
   "directories": {
     "output": "release/"

@@ -1,5 +1,5 @@
 {
-  "name": "electron-shutdown",
+  "name": "auto-shutdown",
   "version": "1.0.0",
   "description": "Schedule an automatic shutdown",
   "homepage": "https://github.com/SteffenKoehler/electron-shutdown",
@@ -8,6 +8,7 @@
     "email": "steffen.koehler92@gmail.com"
   },
   "keywords": [
+    "shutdown",
     "angular",
     "angular 8",
     "electron",
