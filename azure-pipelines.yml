@@ -3,44 +3,61 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
-strategy:
-  matrix:
-    # linux:
-      # imageName: 'ubuntu-16.04'
-    mac:
-      imageName: 'macos-10.13'
-    windows:
-      imageName: 'vs2017-win2016'
-
 trigger:
-- master
+- develop
 
-pool:
-  vmImage: $(imageName)
+jobs:
+  - job: Windows
+    displayName: Build windows
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+      - task: NodeTool@0
+        displayName: 'Install Node.js'
+        inputs:
+          versionSpec: '12.x'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '12.x'
-  displayName: 'Install Node.js'
+      - script: npm install
+        displayName: 'npm install'
 
-- script: |
-    npm install
-  displayName: 'npm install'
+      - script: npm run electron:windows
+        displayName: 'Run npm build'
 
-# Windows
-- script: |
-    npm run electron:windows
-  displayName: 'Build windows'
-  condition: eq( variables['Agent.OS'], 'Windows_NT' )
+      - task: CopyFiles@2
+        displayName: 'Copy windows release'
+        inputs:
+          SourceFolder: $(System.DefaultWorkingDirectory)/release/
+          contents: '*.exe'
+          targetFolder: '$(Build.ArtifactStagingDirectory)/windows'
 
-# Mac
-- script: |
-    npm run electron:mac
-  displayName: 'Build mac'
-  condition: eq( variables['Agent.OS'], 'Darwin' )
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
 
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/release'
+  - job: Mac
+    displayName: Build mac
+    pool:
+      vmImage: macos-10.13
+    steps:
+      - task: NodeTool@0
+        displayName: 'Install Node.js'
+        inputs:
+          versionSpec: '12.x'
+
+      - script: npm install
+        displayName: 'npm install'
+
+      - script: npm run electron:mac
+        displayName: 'Run npm build'
+
+      - task: CopyFiles@2
+        displayName: 'Copy mac release'
+        inputs:
+          SourceFolder: $(System.DefaultWorkingDirectory)/release/
+          contents: '*.dmg'
+          targetFolder: '$(Build.ArtifactStagingDirectory)/mac'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
