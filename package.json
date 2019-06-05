@@ -1,15 +1,15 @@
 {
-  "name": "angular-electron",
-  "version": "4.2.2",
-  "description": "Angular 6 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "name": "electron-shutdown",
+  "version": "1.0.0",
+  "description": "Schedule an automatic shutdown",
+  "homepage": "https://github.com/SteffenKoehler/electron-shutdown",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "Steffen Köhler",
+    "email": "steffen.koehler92@gmail.com"
   },
   "keywords": [
     "angular",
-    "angular 6",
+    "angular 8",
     "electron",
     "typescript",
     "sass"
