@@ -20,7 +20,7 @@ The initial setup was done with the awesome project https://github.com/maximegri
 
 [build-badge]: https://dev.azure.com/steffenkoehler92/electron-shutdown/_apis/build/status/SteffenKoehler.electron-shutdown?branchName=master
 
-[build]: https://dev.azure.com/steffenkoehler92/electron-shutdown/_apis/build/status/SteffenKoehler.electron-shutdown?branchName=master
+[build]: https://dev.azure.com/steffenkoehler92/electron-shutdown/_build/latest?definitionId=1&branchName=master
 
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
