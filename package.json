@@ -1,6 +1,6 @@
 {
   "name": "auto-shutdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Schedule an automatic shutdown",
   "homepage": "https://github.com/SteffenKoehler/electron-shutdown",
   "author": {
