@@ -1,6 +1,6 @@
-workflow "New workflow" {
-  on = "watch"
+workflow "New workflow 2" {
   resolves = ["GitHub Action for npm"]
+  on = "push"
 }
 
 action "GitHub Action for npm" {
