@@ -15,14 +15,14 @@ jobs:
       with:
         node-version: 12.x
 
-    - name: npm install
-      run: npm install
+    # - name: npm install
+    #   run: npm install
 
-    - name: build
-      run: npm run electron:windows
+    # - name: build
+    #   run: npm run electron:windows
 
     - name: archive
-      uses: ./actions/archive
+      uses: /actions/archive
       env:
         ARCHIVE_FILENAME: windows.zip
-        FILES_PATH: ./release
+        FILES_PATH: ./src
