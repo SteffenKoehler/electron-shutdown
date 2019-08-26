@@ -25,4 +25,4 @@ jobs:
       run: npm install -g bestzip
 
     - name: archive
-      run: bestzip windows.zip ./src
+      run: bestzip ./windows.zip ./src
