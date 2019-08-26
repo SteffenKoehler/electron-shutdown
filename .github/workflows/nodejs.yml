@@ -22,7 +22,7 @@ jobs:
     #   run: npm run electron:windows
 
     - name: archive
-      uses: /actions/archive
+      uses: ./.github/actions/archive
       env:
         ARCHIVE_FILENAME: windows.zip
         FILES_PATH: ./src
