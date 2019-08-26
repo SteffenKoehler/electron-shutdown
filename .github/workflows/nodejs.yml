@@ -21,8 +21,8 @@ jobs:
     # - name: build
     #   run: npm run electron:windows
 
+    - name: install zip
+      run: npm install -g bestzip
+
     - name: archive
-      uses: ./.github/actions/archive
-      env:
-        ARCHIVE_FILENAME: windows.zip
-        FILES_PATH: ./src
+      run: bestzip windows.zip ./src
