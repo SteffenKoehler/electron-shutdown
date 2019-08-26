@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM docker:stable
 
 LABEL "maintainer"="Ajit Bohra <ajit@lubus.in>"
 LABEL "repository"="https://github.com/ajitbohra/github-actions-playground"
