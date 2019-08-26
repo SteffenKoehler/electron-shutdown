@@ -6,22 +6,23 @@ jobs:
   windows:
 
     runs-on: windows-latest
- 
+
     steps:
     - uses: actions/checkout@v1
-    
+
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-        
+
     - name: npm install
       run: npm install
-      
+
     - name: build
       run: npm run electron:windows
-      
+
     - name: archive
-      uses: juankaram/archive-action@v1.0.0
-      with:
-        args: zip -r windows.zip ./release
+      uses: ./actions/archive
+      env:
+        ARCHIVE_FILENAME: windows.zip
+        FILES_PATH: ./release
