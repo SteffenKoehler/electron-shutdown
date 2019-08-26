@@ -20,3 +20,8 @@ jobs:
       
     - name: build
       run: npm run electron:windows
+      
+    - name: archive
+      uses: montudor/action-zip@v0.1.0
+      with:
+        args: zip -r windows.zip ./release
