@@ -26,8 +26,8 @@ jobs:
 
     - name: archive
       run: |
-      mkdir -p release
-      bestzip release/windows.zip ./src
+        mkdir -p release
+        bestzip release/windows.zip ./src
 
     - name: upload artifact
       uses: actions/upload-artifact@master
