@@ -24,11 +24,14 @@ jobs:
     # - name: install zip
     #   run: npm install -g bestzip
 
-    - name: archive
-      run: |
-        npm install copyfiles -g
-        mkdir -p build
-        copyfiles release/*.exe build/windows
+    - name: archive - install copyfiles
+      run: npm install copyfiles -g
+        
+    - name: archive - make dir
+      run: mkdir -p build
+      
+    - name: archive - copy files
+      run: copyfiles "release/*.exe" "build/windows"
 
     - name: upload artifact
       uses: actions/upload-artifact@master
