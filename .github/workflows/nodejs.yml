@@ -26,11 +26,11 @@ jobs:
 
     - name: archive
       run: |
-        mkdir -p release
-        bestzip release/windows.zip src/
+        mkdir -p build/windows
+        cp release/*.exe build/windows
 
     - name: upload artifact
       uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: release
+        path: build
