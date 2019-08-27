@@ -27,7 +27,7 @@ jobs:
     - name: archive
       run: |
         npm install copyfiles -g
-        mkdir -p build/windows
+        mkdir -p build
         copyfiles release/*.exe build/windows
 
     - name: upload artifact
