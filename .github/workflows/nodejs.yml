@@ -27,7 +27,7 @@ jobs:
     - name: archive
       run: |
         mkdir -p build/windows
-        cp release/*.exe build/windows
+        copy release/*.exe build/windows
 
     - name: upload artifact
       uses: actions/upload-artifact@master
