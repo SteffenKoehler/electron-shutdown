@@ -23,10 +23,10 @@ jobs:
 
     - name: archive - install copyfiles
       run: npm install copyfiles -g
-      
+
     - name: archive - make dir
       run: mkdir -p build
-      
+
     - name: archive - copy files
       run: copyfiles -f "release/*.exe" "build/windows"
 
@@ -58,10 +58,10 @@ jobs:
 
     - name: archive - install copyfiles
       run: npm install copyfiles -g
-      
+
     - name: archive - make dir
       run: mkdir -p build
-      
+
     - name: archive - copy files
       run: copyfiles -f "release/*.dmg" "build/mac"
 
@@ -70,3 +70,40 @@ jobs:
       with:
         name: my-artifact
         path: build
+
+
+####################################
+
+  linux:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: npm install
+      run: npm ci
+
+    - name: build
+      run: npm run electron:linux
+
+    - name: archive - install copyfiles
+      run: npm install copyfiles -g
+
+    - name: archive - make dir
+      run: mkdir -p build
+
+    - name: archive - copy files
+      run: copyfiles -f "release/*.AppImage" "build/linux"
+
+    - name: upload artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: my-artifact
+        path: build
+
