@@ -61,7 +61,7 @@
     "@ngx-translate/http-loader": "4.0.0",
     "@types/jasmine": "3.4.4",
     "@types/jasminewd2": "2.0.8",
-    "@types/node": "12.11.7",
+    "@types/node": "12.12.7",
     "codelyzer": "5.2.0",
     "core-js": "^3.3.4",
     "electron": "7.0.0",
