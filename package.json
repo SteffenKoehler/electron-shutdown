@@ -63,7 +63,7 @@
     "@types/jasminewd2": "2.0.8",
     "@types/node": "12.12.17",
     "codelyzer": "5.2.1",
-    "core-js": "^3.6.3",
+    "core-js": "^3.6.4",
     "electron": "7.1.11",
     "electron-builder": "22.3.2",
     "electron-reload": "1.5.0",
