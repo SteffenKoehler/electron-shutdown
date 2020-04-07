@@ -10,7 +10,7 @@ jobs:
   - job: Windows
     displayName: Build windows
     pool:
-      vmImage: vs2017-win2016
+      vmImage: windows-latest
     steps:
       - task: NodeTool@0
         displayName: 'Install Node.js'
@@ -38,7 +38,7 @@ jobs:
   - job: Mac
     displayName: Build mac
     pool:
-      vmImage: macos-10.13
+      vmImage: macOS-latest
     steps:
       - task: NodeTool@0
         displayName: 'Install Node.js'
