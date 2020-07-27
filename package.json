@@ -41,7 +41,7 @@
     "@angular/animations": "9.0.6",
     "@angular/cdk": "8.0.0",
     "@angular/material": "8.0.0",
-    "electron-shutdown-command": "0.0.8",
+    "electron-shutdown-command": "2.0.0",
     "hammerjs": "2.0.8",
     "tslib": "^1.13.0"
   },
