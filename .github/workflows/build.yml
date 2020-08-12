@@ -31,6 +31,7 @@ jobs:
       run: copyfiles -f "release/*.exe" "build/windows"
 
     - name: upload artifact
+      if: contains(github.head_ref, 'dependabot') != true # skip this run for all dependency updates
       uses: actions/upload-artifact@v2
       with:
         name: my-artifact
@@ -66,6 +67,7 @@ jobs:
       run: copyfiles -f "release/*.dmg" "build/mac"
 
     - name: upload artifact
+      if: contains(github.head_ref, 'dependabot') != true # skip this run for all dependency updates
       uses: actions/upload-artifact@v2
       with:
         name: my-artifact
@@ -102,6 +104,7 @@ jobs:
       run: copyfiles -f "release/*.AppImage" "build/linux"
 
     - name: upload artifact
+      if: contains(github.head_ref, 'dependabot') != true # skip this run for all dependency updates
       uses: actions/upload-artifact@v2
       with:
         name: my-artifact
