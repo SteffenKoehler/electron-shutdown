@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import shutdown from 'electron-shutdown-command';
+import * as shutdown from 'electron-shutdown-command';
 
 @Component({
   selector: 'app-home',
