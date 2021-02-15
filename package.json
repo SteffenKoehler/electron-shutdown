@@ -80,7 +80,7 @@
     "rxjs": "6.6.3",
     "ts-node": "9.1.1",
     "tslint": "~6.1.0",
-    "typescript": "4.0.5",
+    "typescript": "4.0.7",
     "wait-on": "5.2.1",
     "webdriver-manager": "12.1.8",
     "zone.js": "~0.10.3"
